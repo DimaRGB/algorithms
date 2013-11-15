@@ -12,9 +12,10 @@ function wordCount(text, word) {
 function getPrimes(n) {
   var primes = [], p = 1;
   while( ++p <= n ) {
-    for( var j = 2; j < p; j++ )
+    var sqrtP = Math.sqrt(p) ^ 0;
+    for( var j = 2; j <= sqrtP; j++ )
       if( !(p % j) ) break;
-    j == p && primes.push(p);
+    !~(sqrtP - j) && primes.push(p);
   }
   return primes;
 }
