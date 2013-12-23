@@ -20,3 +20,18 @@ function getPrimes(n) {
   return primes;
 }
 
+function primesEratosthenes(n) {
+  var arr = [], p = 2, i, ret = [];
+  while( p * p <= n ) {
+    for( i = 2 * p; i <= n; i += p )
+      arr[i] = true;
+    for( i = p + 1; i <= n; i++ )
+      if( !arr[i] )
+        break;
+    p = i;
+  }
+  for( i = 2; i <= n; i++ )
+   if( !arr[i] )
+     ret.push(i);
+  return ret;
+}
