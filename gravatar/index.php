@@ -28,15 +28,6 @@
 			<input type='submit' value='get image' />
 		</div>
 	</form>
-
-	<div class="wrap">
-		<label  class='switch'>
-			<input type="checkbox" />
-			<div>
-				<div></div>
-			</div>
-		</label>
-	</div>
 </body>
 
 </html>
