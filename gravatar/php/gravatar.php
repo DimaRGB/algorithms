@@ -1,6 +1,6 @@
 <?php
 
-function getGravatarImageUrl($email, $size = 80, $default = '') {
+function getGravatarImageUrl($email, $size = 80, $default = 'wavatar') {
 	// $size = 1 .. 2048 (px)
 	$hash = md5(strtolower(trim($email)));
 	$default = urlencode($default);
