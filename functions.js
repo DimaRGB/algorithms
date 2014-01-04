@@ -35,3 +35,9 @@ function primesEratosthenes(n) {
      ret.push(i);
   return ret;
 }
+
+Object.prototype.addClass = function(newClass) {
+  var arr = this.className.split(' ');
+  !~arr.indexOf(newClass) && arr.push(newClass);
+  return this.className = arr.join(' ');
+}
