@@ -36,8 +36,19 @@ function primesEratosthenes(n) {
   return ret;
 }
 
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
 Object.prototype.addClass = function(newClass) {
   var arr = this.className.split(' ');
   !~arr.indexOf(newClass) && arr.push(newClass);
   return this.className = arr.join(' ');
+}
+
+String.prototype.camelize = function() {
+  var arr = this.split('-');
+  for( var i = 1; i < arr.length; i++ )
+    arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+  return arr.join('');
 }
